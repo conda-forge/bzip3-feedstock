@@ -16,8 +16,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}  # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - cmake
     - make
