@@ -3,6 +3,7 @@ cmake -S . -B build ^
     -DCMAKE_VERBOSE_MAKEFILE=ON ^
     -Wno-dev ^
     -DBUILD_TESTING=OFF ^
+    -DBZIP3_ENABLE_PTHREAD=OFF ^
     %CMAKE_ARGS% || goto :error
 
 cmake --build build -j%CPU_COUNT% || goto :error
