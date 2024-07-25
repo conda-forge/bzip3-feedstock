@@ -19,7 +19,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - cmake
-    - make
+    - make  # [unix]
+    - m2-make  # [win]
 
 test:
   commands:
