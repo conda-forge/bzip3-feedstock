@@ -1,0 +1,38 @@
+context:
+  version: 1.4.0
+
+package:
+  name: bzip3
+  version: ${{ version }}
+
+source:
+  url: https://github.com/kspalaiologos/bzip3/archive/${{ version }}.tar.gz
+  sha256: d70334c19c7cce2cc6c823566b7d8968ff08a52043d518f55caebd2e407b2233
+
+build:
+  number: 0
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - cmake
+    - make
+  run_exports:
+    - ${{ pin_subpackage('bzip3') }}
+
+tests:
+  - script:
+      - bzip3 --help
+
+about:
+  license: LGPL-3.0-or-later
+  license_file: LICENSE
+  summary: A better and stronger spiritual successor to BZip2.
+  homepage: https://github.com/kspalaiologos/bzip3
+  repository: https://github.com/kspalaiologos/bzip3
+
+extra:
+  recipe-maintainers:
+    - danielnachun
