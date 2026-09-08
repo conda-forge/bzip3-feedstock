@@ -1,5 +1,5 @@
 context:
-  version: "1.5.3"
+  version: "1.5.4"
 
 package:
   name: bzip3
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/kspalaiologos/bzip3/archive/${{ version }}.tar.gz
-  sha256: 21eb292f70866d23ffa12fc3e4fae3fd5bb9a1341c01410dc6bbc5dd62cf2040
+  sha256: c4ff6bfe4a8a9fed987a9de4d6a6f4025a991acec9559fae4853a9d99ca8d76a
 
 build:
-  number: 1
+  number: 0
   skip: win
 
 requirements:
